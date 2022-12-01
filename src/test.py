@@ -1,5 +1,4 @@
 from utils import isAValidCreditCard
-import pytest
 
 def check(answer, creditCardNumber):
     
@@ -21,20 +20,26 @@ def check(answer, creditCardNumber):
 def test_1():
     print(check(True,"49927398716"))
 
+
 def test_2():
-    print(check(False,"49927398717"))
+    print(check(False, "49927398717"))
+
 
 def test_3():
-    print(check(False,"1234567812345678"))
+    print(check(False, "1234567812345678"))
+
 
 def test_4():
-    print(check(True,"1234567812345670"))
+    print(check(True, "1234567812345670"))
+
 
 def test_5():
-    print(check(True,"2222405343248877"))
+    print(check(True, "2222405343248877"))
+
 
 def test_6():
-    print(check(True,"2222990905257051"))
+    print(check(True, "2222990905257051"))
+
 
 def test_all():
     test_1()

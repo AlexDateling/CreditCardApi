@@ -10,10 +10,11 @@ app = Flask(__name__)
 def home():
     return "CreditCard Validator"
 
+
 @app.route('/api/validate/')
 def validate_credit_card():
     payload = request.get_json("creditCard")
-    
+
     creditCard = payload['creditCard']
     if creditCard.isdigit():
         if isAValidCreditCard(creditCard):
@@ -24,6 +25,7 @@ def validate_credit_card():
             return jsonify({"isValid": False}), 200
     else:
         return "Invalid Input", 400
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8001, debug=True)
