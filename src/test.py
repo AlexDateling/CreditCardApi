@@ -1,7 +1,7 @@
 from utils import isAValidCreditCard
 
-def check(answer, creditCardNumber):
-    
+
+def check(answer, creditCardNumber):    
     result = isAValidCreditCard(creditCardNumber)
     if result == answer:
         return True
@@ -16,9 +16,8 @@ def check(answer, creditCardNumber):
 # | 2222405343248877   | True          |
 # | 2222990905257051  True          
 
-
 def test_1():
-    print(check(True,"49927398716"))
+    print(check(True, "49927398716"))
 
 
 def test_2():
