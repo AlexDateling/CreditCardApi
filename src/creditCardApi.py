@@ -26,7 +26,7 @@ def validate_credit_card():
             print("The Credit card issued is invalid ")
             return jsonify({"isValid": False}), 200
     else:
-        return "Invalid Input", 400
+        return (jsonify({"error": "Credit card number must be numeric"}), 200)
 
 
 if __name__ == '__main__':
