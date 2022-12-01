@@ -14,7 +14,7 @@ def home():
 
 
 @app.route('/api_v1/validate/')
-def validate_credit_card():
+def validate_credit_card_json():
     payload = request.get_json("creditCard")
 
     creditCard = payload['creditCard']
