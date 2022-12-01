@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: credit-card-api
+  labels:
+    name: credit-card-api
+spec:
+  containers:
+  - name: credit-card-api
+    image: creditcardapi:latest
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 8001
+    imagePullPolicy: IfNotPresent
