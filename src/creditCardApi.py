@@ -28,7 +28,7 @@ def validate_credit_card():
     else:
         return (jsonify({"error": "Credit card number must be numeric"}), 400)
 
-@app.route('/api_v2/validate/<String: creditCard>')
+@app.route('/api_v2/validate/<String:creditCard>')
 def validate_credit_card(creditCard):
     if creditCard.isdigit():
         if is_valid_credit_card(creditCard):
