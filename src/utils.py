@@ -1,4 +1,4 @@
-def isAValidCreditCard(cardNumber: str):
+def is_valid_credit_card(cardNumber: str):
     TotalSum = 0
     cardNumberLength = len(cardNumber)
     parity = cardNumberLength % 2

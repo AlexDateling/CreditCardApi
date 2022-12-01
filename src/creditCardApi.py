@@ -1,10 +1,10 @@
 from flask import Flask, jsonify, request
-from utils import isAValidCreditCard
+from utils import is_valid_credit_card
 
 
 app = Flask(__name__)
 
-# isValid = isAValidCreditCard("49927398717")
+# isValid = is_valid_credit_card("49927398717")
 # print(isValid)
 
 
@@ -19,7 +19,7 @@ def validate_credit_card():
 
     creditCard = payload['creditCard']
     if creditCard.isdigit():
-        if isAValidCreditCard(creditCard):
+        if is_valid_credit_card(creditCard):
             print("The Credit card issued is valid ")
             return jsonify({"isValid": True}), 200
         else:

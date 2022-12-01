@@ -1,7 +1,7 @@
-from utils import isAValidCreditCard
+from utils import is_valid_credit_card
 
 def check(answer, creditCardNumber):
-    result = isAValidCreditCard(creditCardNumber)
+    result = is_valid_credit_card(creditCardNumber)
     assert answer == result
 
 
